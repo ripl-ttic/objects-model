@@ -6,6 +6,7 @@ add_definitions(
 add_executable(object-server object_server.c)
 
 pods_use_pkg_config_packages(object-server 
+    gthread-2.0
     lcm 
     bot2-core 
     bot2-param-client
