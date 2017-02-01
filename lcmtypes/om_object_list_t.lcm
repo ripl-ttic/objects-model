@@ -1,0 +1,12 @@
+// List of objects that we may want the bot to manipulate (unlike
+// obstacles). These include the flatbed trailers on/from which
+// we may want to put/remove pallets
+
+package om;
+
+struct object_list_t {
+    int64_t utime;
+
+    int32_t num_objects;
+    object_t objects[num_objects];
+}

@@ -1,0 +1,11 @@
+package om;
+
+struct xml_cmd_t
+{
+    int64_t  utime;
+    int8_t   cmd_type;
+    string   path;
+
+    const int8_t LOAD_FILE=0;
+    const int8_t WRITE_FILE=1;
+}

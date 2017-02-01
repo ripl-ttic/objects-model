@@ -1,0 +1,50 @@
+// Objects in the world that we may expect the bot to interact
+// with, including tractor trailers. These are unlike obstacles,
+// in that there is not the implicit assumption that they should
+// be avoided.
+//
+// Objects are referenced in the world coordinate frame
+
+package om;
+
+struct object_t
+{
+    int64_t utime;
+
+    int64_t id;
+
+    double pos[3];         // [m] location of body-fixed frame with
+                          // respect to the world coordinate frame.
+                          // The position of the body-fixed frame
+                          // wrt the object depends upon object type.
+
+    double orientation[4]; // quaternion that defines the rotation
+                          // from body to world frame
+
+    // bounding box: if the object_type has a corresponding RWX model, then the
+    //               bounding box fields below should be set to the extents of 
+    //               the RWX model
+    double bbox_min[3];    // [m] minimum x,y,z extent of object in 
+                          // body-fixed frame
+    double bbox_max[3];    // [m] maximum x,y,z extent of object in 
+                          // body-fixed frame
+
+    int16_t object_type;
+
+    //name??
+    string label;
+    
+    //some stuff coppied from agile 
+
+    const int16_t UNKNOWN = 0;               // Unknown object type, use bounding box
+    const int16_t TABLE = 1;            
+    const int16_t CHAIR = 2;            
+    const int16_t TRASHCAN = 3;             
+    const int16_t BED = 4;         
+    const int16_t FRIDGE = 5;         
+    const int16_t MICROWAVE = 6;         
+    const int16_t TV = 7;         
+    const int16_t ELEVATOR_DOOR = 8;         
+    const int16_t LAPTOP = 9;         
+    const int16_t WATER_FOUNTAIN = 10;         
+}
