@@ -1,20 +1,16 @@
-This is a default README file, please replace its contents with information
-relevant to your project.
+# Objects Model
 
-This software is constructed according to the Pods software policies and
-templates.  The policies and templates can be found at:
+A client/server for querying and maintaining a world model of objects, along with a renderer.
 
-  http://sourceforge.net/projects/pods
+The code follows the pods build framework (https://sourceforge.net/p/pods/home/Home/).
 
-====
+## Requirements
 
-Name:         dynamic_objects
-Maintainers:  FILL-ME-IN
-Summary:      FILL-ME-IN
-Description:
-  FILL-ME-IN
-
-Requirements: 
-  FILL-ME-IN
-
-License:      FILL-ME-IN
+* CMake
+* lcm
+* libbot2 (lcm and libbot are available as a PODS collection https://github.com/ripl-ttic/lcm-libbot)
+* GTK+ 2.0+
+* OpenGL
+* GLUT
+* GLib
+* path-utils (https://github.com/ripl-ttic/path-utils)
