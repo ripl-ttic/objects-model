@@ -3,16 +3,18 @@
 
 #include <glib.h>
 
-typedef struct _object_model ObjectWorldModel;
-
 #include <lcm/lcm.h>
-#include <lcmtypes/bot_core_pose_t.h>
 #include <bot_param/param_client.h>
-#include <lcmtypes/bot2_param.h>
 #include <bot_param/param_util.h>
+
+#include <lcmtypes/bot_core_pose_t.h>
+#include <lcmtypes/bot2_param.h>
 
 #include <lcmtypes/om_object_list_t.h>
 #include <lcmtypes/om_object_t.h>
+
+
+typedef struct _object_model ObjectWorldModel;
 
 #define OM_POS_CHANNEL         "POSE"
 #define OM_OL_CHANNEL          "OBJECT_LIST"
